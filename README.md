@@ -29,3 +29,5 @@ Instalar dependências:
 ```bash
 pip install -r requirements.txt
 ```
+
+> Rodando no Render do @murilo-a-souza. O deploy é automático, mas pode contatar se preciso.
