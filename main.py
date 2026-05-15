@@ -148,7 +148,7 @@ async def professor_cmd(interaction: discord.Interaction):
     quantidade="Quantidade de mensagens para apagar"
 )
 async def clear(
-    interaction: main.Interaction,
+    interaction: discord.Interaction,
     quantidade: int
 ):
 
