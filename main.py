@@ -27,9 +27,10 @@
 # IMPORTAÇÕES
 # =========================================================
 
-import main
+import discord
 import os
-from main import app_commands
+
+from discord import app_commands
 from discord.ext import commands
 
 
