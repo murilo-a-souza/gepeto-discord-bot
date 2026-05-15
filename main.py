@@ -27,9 +27,9 @@
 # IMPORTAÇÕES
 # =========================================================
 
-import discord
+import main
 import os
-from discord import app_commands
+from main import app_commands
 from discord.ext import commands
 
 
@@ -44,7 +44,7 @@ TOKEN = os.getenv("TOKEN")
 # CONFIGURAÇÃO DOS INTENTS
 # =========================================================
 
-intents = discord.Intents.default()
+intents = main.Intents.default()
 intents.message_content = True
 
 
@@ -85,7 +85,7 @@ async def on_ready():
     name="ajuda",
     description="Lista os comandos disponíveis"
 )
-async def ajuda_cmd(interaction: discord.Interaction):
+async def ajuda_cmd(interaction: main.Interaction):
 
     await interaction.response.send_message(
         "**Comandos disponíveis:**\n\n"
@@ -105,7 +105,7 @@ async def ajuda_cmd(interaction: discord.Interaction):
     name="links",
     description="Mostra links importantes"
 )
-async def links_cmd(interaction: discord.Interaction):
+async def links_cmd(interaction: main.Interaction):
 
     await interaction.response.send_message(
         "**Links importantes:**\n\n"
@@ -124,7 +124,7 @@ async def links_cmd(interaction: discord.Interaction):
     name="professor",
     description="Mostra orientações dos professores"
 )
-async def professor_cmd(interaction: discord.Interaction):
+async def professor_cmd(interaction: main.Interaction):
 
     await interaction.response.send_message(
         "**Orientações gerais:**\n\n"
@@ -147,7 +147,7 @@ async def professor_cmd(interaction: discord.Interaction):
     quantidade="Quantidade de mensagens para apagar"
 )
 async def clear(
-    interaction: discord.Interaction,
+    interaction: main.Interaction,
     quantidade: int
 ):
 
